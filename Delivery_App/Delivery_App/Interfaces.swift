@@ -1,8 +1,8 @@
 //
-//  Store.swift
-//  Delivery App
+//  Interfaces.swift
+//  Delivery_App
 //
-//  Created by Maria Shehata on 2/3/20.
+//  Created by Maria Shehata on 2/26/20.
 //  Copyright © 2020 Maria Shehata. All rights reserved.
 //
 

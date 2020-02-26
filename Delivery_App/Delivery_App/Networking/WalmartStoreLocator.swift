@@ -6,9 +6,10 @@
 //  Copyright © 2020 Maria Shehata. All rights reserved.
 //
 
+/*
 import Foundation
 
-class WalmartStoreLocator{
+class WalmartStoreLocator {
     
     var lon: Double
     var lat: Double
@@ -35,7 +36,7 @@ class WalmartStoreLocator{
         request.allHTTPHeaderFields = header
 
         // Specify the body
-        let jsonObject = []
+        let jsonObject = [] as [String : Any]
             
 
         // Set the request type
@@ -51,3 +52,4 @@ class WalmartStoreLocator{
 
 }
 
+*/
