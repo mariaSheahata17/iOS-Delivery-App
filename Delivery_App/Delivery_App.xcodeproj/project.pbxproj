@@ -21,6 +21,7 @@
 		C2E36FDD24102D6800A80CAF /* SelectedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FDC24102D6800A80CAF /* SelectedProduct.swift */; };
 		C2E36FDF24102D8D00A80CAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FDE24102D8D00A80CAF /* User.swift */; };
 		C2E36FE324102DE500A80CAF /* WalmartStoreLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FE224102DE500A80CAF /* WalmartStoreLocator.swift */; };
+		C2E36FE62410349100A80CAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E36FE52410349100A80CAF /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C2E36FDC24102D6800A80CAF /* SelectedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedProduct.swift; sourceTree = "<group>"; };
 		C2E36FDE24102D8D00A80CAF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2E36FE224102DE500A80CAF /* WalmartStoreLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartStoreLocator.swift; sourceTree = "<group>"; };
+		C2E36FE52410349100A80CAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E36FE62410349100A80CAF /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 			children = (
 				C2E36FBC24102C1700A80CAF /* Delivery_App */,
 				C2E36FBB24102C1700A80CAF /* Products */,
+				C2E36FE42410349000A80CAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +109,14 @@
 				C2E36FE224102DE500A80CAF /* WalmartStoreLocator.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		C2E36FE42410349000A80CAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2E36FE52410349100A80CAF /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

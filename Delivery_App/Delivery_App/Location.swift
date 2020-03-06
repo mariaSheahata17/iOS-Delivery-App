@@ -21,6 +21,7 @@ class Location: NSObject, CLLocationManagerDelegate{
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
         locationManger.requestWhenInUseAuthorization()
         locationManger.startUpdatingLocation()
+
     }
     
     // this function is called each time the user changes the location
@@ -29,6 +30,9 @@ class Location: NSObject, CLLocationManagerDelegate{
         let location = locations[0]
         self.latitude! = location.coordinate.latitude
         self.longitude! = location.coordinate.longitude
+        print("location.coordinate: \(location.coordinate)")
+
+
     }
     
     
