@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "KDTree",
+        "repositoryURL": "https://github.com/Bersaelor/KDTree",
+        "state": {
+          "branch": null,
+          "revision": "8bfe6cf0f7c3e9b0d1bbe949ead6da5b80b4da44",
+          "version": "1.3.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

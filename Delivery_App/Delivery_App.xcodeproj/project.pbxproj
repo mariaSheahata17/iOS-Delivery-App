@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		C2E36FDF24102D8D00A80CAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FDE24102D8D00A80CAF /* User.swift */; };
 		C2E36FE324102DE500A80CAF /* WalmartStoreLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FE224102DE500A80CAF /* WalmartStoreLocator.swift */; };
 		C2E36FE62410349100A80CAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E36FE52410349100A80CAF /* CoreLocation.framework */; };
+		C2E36FE92415E54500A80CAF /* KDTree in Frameworks */ = {isa = PBXBuildFile; productRef = C2E36FE82415E54500A80CAF /* KDTree */; };
+		C2E36FEB24167F5600A80CAF /* GroupOrdersTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FEA24167F5600A80CAF /* GroupOrdersTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,7 @@
 		C2E36FDE24102D8D00A80CAF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2E36FE224102DE500A80CAF /* WalmartStoreLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartStoreLocator.swift; sourceTree = "<group>"; };
 		C2E36FE52410349100A80CAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C2E36FEA24167F5600A80CAF /* GroupOrdersTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupOrdersTree.swift; path = ../../../../Documents/GroupOrdersTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E36FE62410349100A80CAF /* CoreLocation.framework in Frameworks */,
+				C2E36FE92415E54500A80CAF /* KDTree in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,7 @@
 				C2E36FE124102DBF00A80CAF /* Networking */,
 				C2E36FD324102C9600A80CAF /* Interfaces.swift */,
 				C2E36FD124102C6A00A80CAF /* Location.swift */,
+				C2E36FEA24167F5600A80CAF /* GroupOrdersTree.swift */,
 				C2E36FD924102D0C00A80CAF /* Objects */,
 				C2E36FBD24102C1700A80CAF /* AppDelegate.swift */,
 				C2E36FBF24102C1700A80CAF /* SceneDelegate.swift */,
@@ -135,6 +140,9 @@
 			dependencies = (
 			);
 			name = Delivery_App;
+			packageProductDependencies = (
+				C2E36FE82415E54500A80CAF /* KDTree */,
+			);
 			productName = Delivery_App;
 			productReference = C2E36FBA24102C1700A80CAF /* Delivery_App.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +171,9 @@
 				Base,
 			);
 			mainGroup = C2E36FB124102C1700A80CAF;
+			packageReferences = (
+				C2E36FE72415E54500A80CAF /* XCRemoteSwiftPackageReference "KDTree" */,
+			);
 			productRefGroup = C2E36FBB24102C1700A80CAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -190,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E36FEB24167F5600A80CAF /* GroupOrdersTree.swift in Sources */,
 				C2E36FD824102CF500A80CAF /* GroupOrder.swift in Sources */,
 				C2E36FE324102DE500A80CAF /* WalmartStoreLocator.swift in Sources */,
 				C2E36FD624102CCF00A80CAF /* ContactInfo.swift in Sources */,
@@ -398,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2E36FE72415E54500A80CAF /* XCRemoteSwiftPackageReference "KDTree" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bersaelor/KDTree";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2E36FE82415E54500A80CAF /* KDTree */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2E36FE72415E54500A80CAF /* XCRemoteSwiftPackageReference "KDTree" */;
+			productName = KDTree;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C2E36FB224102C1700A80CAF /* Project object */;
 }
