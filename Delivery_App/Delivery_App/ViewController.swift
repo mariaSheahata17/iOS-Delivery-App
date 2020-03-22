@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
 
     // Actions
+    /*
     
     @IBAction func getLocation(_ sender: UIButton) {
         let location  = Location()
@@ -49,5 +50,6 @@ class ViewController: UIViewController {
         print(location.longitude)
 
     }
+ */
 }
 

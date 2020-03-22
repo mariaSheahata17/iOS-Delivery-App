@@ -14,6 +14,8 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    static let geoCoder = CLGeocoder()
     let center = UNUserNotificationCenter.current()
     let locationManager = CLLocationManager()
 
@@ -24,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // using "Visit Monitoring" from Core Location framework
         locationManager.startMonitoringVisits()
         locationManager.delegate = self
+        // Uncomment following code to enable fake visits
+        locationManager.distanceFilter = 35 // 0
+        locationManager.allowsBackgroundLocationUpdates = true // 1
+        locationManager.startUpdatingLocation()  // 2
+
         return true
     }
 
@@ -48,15 +55,24 @@ extension AppDelegate: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
     // create CLLocation from the coordinates of CLVisit
     let clLocation = CLLocation(latitude: visit.coordinate.latitude, longitude: visit.coordinate.longitude)
-    print(clLocation.coordinate)
+
+    // Get location description (address from the coordinates)
+    AppDelegate.geoCoder.reverseGeocodeLocation(clLocation) { placemarks, _ in
+      if let place = placemarks?.first {
+        let description = "\(place)"
+        self.newVisitReceived(visit, description: description)
+      }
+    }
+
   }
 
- func newVisitReceived(_ visit: CLVisit, description: String) {
-   let location = Location()
+  func newVisitReceived(_ visit: CLVisit, description: String) {
+    let location = Location(visit: visit, descriptionString: description)
 
-   // Save location to disk
- }
-
+    // Save location to disk
+    
+  }
 }
+
   
 
