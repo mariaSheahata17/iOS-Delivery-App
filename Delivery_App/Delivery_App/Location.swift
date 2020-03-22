@@ -4,48 +4,42 @@
 //
 //  Created by Maria Shehata on 3/4/20.
 //  Copyright © 2020 Maria Shehata. All rights reserved.
-//
+//source:
+/*
+ https://www.raywenderlich.com/5247-core-location-tutorial-for-ios-tracking-visited-locations
 
+ */
 import Foundation
 import CoreLocation
-import UIKit
 
-class Location: NSObject, CLLocationManagerDelegate{
-    
-    let locationManger  = CLLocationManager()
-    var latitude : Double?
-    var longitude : Double?
-    
-    override init() {
-        super.init()
-
-    }
-    
-    func startSearchingLocation(){
-
-        locationManger.delegate = self
-        locationManger.desiredAccuracy = kCLLocationAccuracyBest
-        locationManger.requestWhenInUseAuthorization()
-        locationManger.startUpdatingLocation()
-
-    }
-    
-    // this function is called each time the user changes the location
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let location = locations[0]
-        self.latitude! = location.coordinate.latitude
-        self.longitude! = location.coordinate.longitude
-        print("location.coordinate: \(location.coordinate)")
-
-
-    }
-    
-    // Handle errors here
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
-    }
-    
-    
-    
+class Location: Codable {
+  static let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .medium
+    return formatter
+  }()
+  
+  var coordinates: CLLocationCoordinate2D {
+    return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+  }
+  
+  let latitude: Double
+  let longitude: Double
+  let date: Date
+  let dateString: String
+  let description: String
+  
+  init(_ location: CLLocationCoordinate2D, date: Date, descriptionString: String) {
+    latitude =  location.latitude
+    longitude =  location.longitude
+    self.date = date
+    dateString = Location.dateFormatter.string(from: date)
+    description = descriptionString
+  }
+  
+  convenience init(visit: CLVisit, descriptionString: String) {
+    self.init(visit.coordinate, date: visit.arrivalDate, descriptionString: descriptionString)
+  }
 }
+

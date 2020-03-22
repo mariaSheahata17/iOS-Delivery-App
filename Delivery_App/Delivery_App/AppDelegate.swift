@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         locationManager.requestAlwaysAuthorization()
         // using "Visit Monitoring" from Core Location framework
-        //locationManager.startMonitoringVisits()
-        //locationManager.delegate = self
+        locationManager.startMonitoringVisits()
+        locationManager.delegate = self
         return true
     }
 
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-/*
+
 //AppDelegate conform to CLLocationManagerDelegate.
 extension AppDelegate: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
@@ -58,5 +58,5 @@ extension AppDelegate: CLLocationManagerDelegate {
  }
 
 }
-  */
+  
 
