@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import CoreLocation
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+    let center = UNUserNotificationCenter.current()
+    let locationManager = CLLocationManager()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        locationManager.requestAlwaysAuthorization()
+        // using "Visit Monitoring" from Core Location framework
+        //locationManager.startMonitoringVisits()
+        //locationManager.delegate = self
         return true
     }
 
@@ -31,7 +40,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+}
 
+/*
+//AppDelegate conform to CLLocationManagerDelegate.
+extension AppDelegate: CLLocationManagerDelegate {
+  func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
+    // create CLLocation from the coordinates of CLVisit
+    let clLocation = CLLocation(latitude: visit.coordinate.latitude, longitude: visit.coordinate.longitude)
+    print(clLocation.coordinate)
+  }
+
+ func newVisitReceived(_ visit: CLVisit, description: String) {
+   let location = Location()
+
+   // Save location to disk
+ }
 
 }
+  */
 

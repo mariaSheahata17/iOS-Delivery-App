@@ -8,15 +8,21 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 class Location: NSObject, CLLocationManagerDelegate{
     
-    let locationManger = CLLocationManager()
+    let locationManger  = CLLocationManager()
     var latitude : Double?
     var longitude : Double?
     
     override init() {
         super.init()
+
+    }
+    
+    func startSearchingLocation(){
+
         locationManger.delegate = self
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
         locationManger.requestWhenInUseAuthorization()
@@ -33,6 +39,11 @@ class Location: NSObject, CLLocationManagerDelegate{
         print("location.coordinate: \(location.coordinate)")
 
 
+    }
+    
+    // Handle errors here
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
     
     
