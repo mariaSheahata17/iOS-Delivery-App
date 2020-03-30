@@ -6,7 +6,7 @@
 //  Copyright © 2020 Maria Shehata. All rights reserved.
 //
 
-/*
+
 import Foundation
 class WalmartStoreLocator {
     
@@ -21,23 +21,18 @@ class WalmartStoreLocator {
     
     func startConnection(){
         // URL
-        let url = URL(string : "https://developer.api.walmart.com/api-proxy/service/affil/product/stores")
-        guard url != nil else{
-            print("Error creating url object")
-        }
-        // URL Request
-        var request = URLRequest( url : url!)
-        // Specify the header
-        let header = ["lat": "\(self.lat)" , "lon" : "\(self.lon)"]
-        request.allHTTPHeaderFields = header
-        // Specify the body
-        let jsonObject = [] as [String : Any]
+        guard let url = URL(string : "https://developer.api.walmart.com/api-proxy/service/affil/product/taxonomy")else{ return}
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            if let response = response{
+                print(response)
+            }
             
-        // Set the request type
-        // Get the URLSession
-        // Create the data task
-        // Fire off the data task
-    }
+            if let data = data{
+                print(data)
+            }
+        }.resume()
+      }
     
 }
-*/
+

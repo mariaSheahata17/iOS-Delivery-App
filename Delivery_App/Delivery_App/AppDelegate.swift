@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         locationManager.delegate = self
         // Uncomment following code to enable fake visits
         locationManager.distanceFilter = 35 // 0
-        locationManager.allowsBackgroundLocationUpdates = true // 1
+        //locationManager.allowsBackgroundLocationUpdates = true // 1
         locationManager.startUpdatingLocation()  // 2
 
         return true
@@ -68,10 +68,30 @@ extension AppDelegate: CLLocationManagerDelegate {
 
   func newVisitReceived(_ visit: CLVisit, description: String) {
     let location = Location(visit: visit, descriptionString: description)
+    print(location.coordinates)
 
     // Save location to disk
     
   }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // 1
+        guard let location = locations.first else {
+            print("error: location is nil")
+          return
+        }
+        print(location.coordinate)
+        
+        // 2
+        AppDelegate.geoCoder.reverseGeocodeLocation(location) { placemarks, _ in
+        if let place = placemarks?.first {
+          // 3
+          let description = "Fake visit: \(place)"
+            
+        }
+      }
+    }
+
 }
 
   
