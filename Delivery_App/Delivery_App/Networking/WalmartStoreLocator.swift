@@ -6,7 +6,14 @@
 //  Copyright © 2020 Maria Shehata. All rights reserved.
 //
 
-
+/*
+Walmart Additional Headers : https://walmart.io/docs/affiliate/onboarding-guide
+ 1. Private key version
+ 2. ConsumerID
+ 3. Timestamp / command-> date +%s
+ 4. Generated signature
+ 
+*/
 import Foundation
 class WalmartStoreLocator {
     
@@ -22,7 +29,14 @@ class WalmartStoreLocator {
     func startConnection(){
         // Additional Headers from Walmart Affliate API
         let sessionConfig = URLSessionConfiguration.default
-        sessionConfig.httpAdditionalHeaders = ["WM_SEC.KEY_VERSION": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3"]
+        sessionConfig.httpAdditionalHeaders = ["WM_CONSUMER.INTIMESTAMP":"1585712917",                  // Timestamp
+                                               "WM_CONSUMER.ID":"ca0ab1ed-8b48-453f-9221-71d35b455336", // ConsumerID
+                                               "WM_SEC.KEY_VERSION":"1",
+                                               "WM_QOS.CORRELATION_ID":"-18006880586",
+                                               "WM_IFX.CLIENT_TYPE":"INTERNAL",
+                                               "WM_PREVIEW":"false",
+                                               "WM_SHOW_REASON_CODES":"ALL",
+                                               "Content-Type":"application/json"]
         // URL
         guard let url = URL(string : "https://developer.api.walmart.com/api-proxy/service/affil/product/taxonomy")else{ return}
         let session = URLSession.shared
