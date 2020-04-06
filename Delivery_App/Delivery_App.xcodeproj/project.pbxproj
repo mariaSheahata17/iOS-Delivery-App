@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C204E27F243ABD08003E19A3 /* GroupOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C204E27E243ABD08003E19A3 /* GroupOrderView.swift */; };
 		C2E36FBE24102C1700A80CAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FBD24102C1700A80CAF /* AppDelegate.swift */; };
 		C2E36FC024102C1700A80CAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FBF24102C1700A80CAF /* SceneDelegate.swift */; };
 		C2E36FC224102C1700A80CAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FC124102C1700A80CAF /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C204E27E243ABD08003E19A3 /* GroupOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupOrderView.swift; sourceTree = "<group>"; };
 		C2E36FBA24102C1700A80CAF /* Delivery_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delivery_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E36FBD24102C1700A80CAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2E36FBF24102C1700A80CAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C204E280243ABD1B003E19A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C204E27E243ABD08003E19A3 /* GroupOrderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C2E36FB124102C1700A80CAF = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		C2E36FBC24102C1700A80CAF /* Delivery_App */ = {
 			isa = PBXGroup;
 			children = (
+				C204E280243ABD1B003E19A3 /* Views */,
 				C2E36FE124102DBF00A80CAF /* Networking */,
 				C2E36FD324102C9600A80CAF /* Interfaces.swift */,
 				C2E36FD124102C6A00A80CAF /* Location.swift */,
@@ -202,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E36FEB24167F5600A80CAF /* GroupOrdersTree.swift in Sources */,
+				C204E27F243ABD08003E19A3 /* GroupOrderView.swift in Sources */,
 				C2E36FD824102CF500A80CAF /* GroupOrder.swift in Sources */,
 				C2E36FE324102DE500A80CAF /* WalmartStoreLocator.swift in Sources */,
 				C2E36FD624102CCF00A80CAF /* ContactInfo.swift in Sources */,
