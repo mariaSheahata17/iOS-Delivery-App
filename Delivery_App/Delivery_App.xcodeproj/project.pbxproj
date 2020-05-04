@@ -25,6 +25,7 @@
 		C2E36FE62410349100A80CAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E36FE52410349100A80CAF /* CoreLocation.framework */; };
 		C2E36FE92415E54500A80CAF /* KDTree in Frameworks */ = {isa = PBXBuildFile; productRef = C2E36FE82415E54500A80CAF /* KDTree */; };
 		C2E36FEB24167F5600A80CAF /* GroupOrdersTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FEA24167F5600A80CAF /* GroupOrdersTree.swift */; };
+		C2F30346245E5EC900D07F23 /* GroceryItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F30345245E5EC900D07F23 /* GroceryItemCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C2E36FE224102DE500A80CAF /* WalmartStoreLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartStoreLocator.swift; sourceTree = "<group>"; };
 		C2E36FE52410349100A80CAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C2E36FEA24167F5600A80CAF /* GroupOrdersTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupOrdersTree.swift; path = ../../../../Documents/GroupOrdersTree.swift; sourceTree = "<group>"; };
+		C2F30345245E5EC900D07F23 /* GroceryItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				C204E27E243ABD08003E19A3 /* GroupOrderView.swift */,
+				C2F30345245E5EC900D07F23 /* GroceryItemCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				C2E36FDB24102D3700A80CAF /* Order.swift in Sources */,
 				C2E36FC224102C1700A80CAF /* ViewController.swift in Sources */,
 				C2E36FBE24102C1700A80CAF /* AppDelegate.swift in Sources */,
+				C2F30346245E5EC900D07F23 /* GroceryItemCellView.swift in Sources */,
 				C2E36FD424102C9600A80CAF /* Interfaces.swift in Sources */,
 				C2E36FD224102C6A00A80CAF /* Location.swift in Sources */,
 				C2E36FC024102C1700A80CAF /* SceneDelegate.swift in Sources */,
