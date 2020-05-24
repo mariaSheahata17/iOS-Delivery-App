@@ -109,7 +109,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCg-aa-v18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904" y="-3"/>
+            <point key="canvasLocation" x="1843" y="5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8Ar-yL-s9h">
@@ -182,6 +182,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wnB-Qs-C3t" id="3vD-RQ-BQL"/>
+                                    <outlet property="delegate" destination="wnB-Qs-C3t" id="rNg-JI-gV5"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <constraints>
@@ -200,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2y-bX-rby" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2757.971014492754" y="-3.3482142857142856"/>
+            <point key="canvasLocation" x="2712" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PLx-7G-312">
