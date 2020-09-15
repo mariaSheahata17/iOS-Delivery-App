@@ -1,7 +1,7 @@
-# Delivery_iOS_Mobile_App
+#  iOS Delivery Mobile App
 
 
-**Delivery** is a delivery application for iOS.
+**Delivery Free** is a delivery application for iOS.
 
 Submitted by: **Maria Shehata**
 
